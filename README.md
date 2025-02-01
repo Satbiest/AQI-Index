@@ -2,5 +2,5 @@ Cara menjalankan
 import streamlit as st
 
 Run Streamlit app
-streamlit run air.py
-http://localhost:8501/
+streamlit run Air.py
+https://airindex.streamlit.app/
