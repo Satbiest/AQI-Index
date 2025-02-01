@@ -7,7 +7,7 @@ import numpy as np
 
 # Membaca dataset
 try:
-    df = pd.read_excel("airrdataa.xls")
+    df = pd.read_excel("airrdataa.xlsx")
 except Exception as e:
     st.error(f"Error reading Excel file: {e}")
     st.stop()
