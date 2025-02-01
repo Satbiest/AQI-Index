@@ -7,9 +7,9 @@ import numpy as np
 
 # Membaca dataset
 try:
-    df = pd.read_excel("airrdataa.xlsx")
+    df = pd.read_csv("airrdataaa.csv", encoding="utf-8")
 except Exception as e:
-    st.error(f"Error reading Excel file: {e}")
+    st.error(f"Error reading CSV file: {e}")
     st.stop()
 
 # Menghapus spasi dari nama kolom (jika ada)
@@ -60,9 +60,9 @@ gauge = go.Figure(go.Indicator(
 ))
 st.plotly_chart(gauge)
 
-# Menambahkan kolom bulan jika tidak ada kolom 'date' atau 'month'
+# Menambahkan kolom bulan jika tidak ada kolom 'date'
 if 'month' not in filtered_df.columns:
-    filtered_df['month'] = pd.to_datetime(filtered_df[['year', 'month', 'day']], errors='coerce').dt.month
+    filtered_df['month'] = pd.to_datetime(filtered_df[['year', 'month', 'day']]).dt.month
 
 # Time series AQI per bulan
 st.subheader("AQI Trend per Month")
