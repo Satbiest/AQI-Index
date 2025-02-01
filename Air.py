@@ -7,7 +7,7 @@ import numpy as np
 
 # Membaca dataset
 try:
-    df = pd.read_csv("C:/Users/resia/Downloads/airrdataa.csv", encoding="utf-8")
+    df = pd.read_csv("airrdataa.csv", encoding="utf-8")
 except Exception as e:
     st.error(f"Error reading CSV file: {e}")
     st.stop()
