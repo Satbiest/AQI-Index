@@ -1,4 +1,4 @@
-sandas 
+pandas 
 seaborn 
 numpy 
 streamlit
