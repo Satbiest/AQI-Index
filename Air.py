@@ -19,7 +19,7 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     # Cek apakah file ada
-    file_path = 'final_df.csv'
+    file_path = 'final_df.csv.zip'
     
     if not os.path.exists(file_path):
         st.error(f"File '{file_path}' tidak ditemukan di folder ini. Mohon upload atau pindahkan file ke folder yang sama dengan script ini.")
